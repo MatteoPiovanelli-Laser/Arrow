@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://scripts/main.gd" type="Script" id=1]
 [ext_resource path="res://scripts/editor/app_menu.gd" type="Script" id=2]
@@ -25,6 +25,7 @@
 [ext_resource path="res://scripts/editor/panels/notification.gd" type="Script" id=23]
 [ext_resource path="res://scripts/editor/new_release_check.gd" type="Script" id=24]
 [ext_resource path="res://scripts/editor/quick_preferences.gd" type="Script" id=25]
+[ext_resource path="res://resources/ToolScale.svg" type="Texture" id=26]
 [ext_resource path="res://scripts/editor/panels/console.gd" type="Script" id=33]
 
 [sub_resource type="StyleBoxFlat" id=1]
@@ -819,8 +820,8 @@ window_title = "{ title by options }"
 mode_overrides_title = false
 mode = 2
 access = 2
-current_dir = "user://"
-current_path = "user://"
+current_dir = "/Godot Projects/Arrow"
+current_path = "/Godot Projects/Arrow/"
 script = ExtResource( 20 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1004,6 +1005,22 @@ rect_min_size = Vector2( 20, 20 )
 mouse_default_cursor_shape = 11
 size_flags_horizontal = 9
 size_flags_vertical = 9
+
+[node name="ScaleIcon" type="TextureRect" parent="FloatToolsLayer/Container/Inspector/VBoxContainer/Titlebar/ResizePoint"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 10.0
+margin_bottom = 10.0
+texture = ExtResource( 26 )
+expand = true
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TabContainer" type="TabContainer" parent="FloatToolsLayer/Container/Inspector/VBoxContainer"]
 margin_top = 24.0
@@ -2830,6 +2847,22 @@ margin_right = 261.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 20, 20 )
 mouse_default_cursor_shape = 11
+
+[node name="ScaleIcon" type="TextureRect" parent="FloatToolsLayer/Container/Console/VBoxContainer/Titlebar/ResizePoint"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 10.0
+margin_bottom = 10.0
+texture = ExtResource( 26 )
+expand = true
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="PanelContainer" type="PanelContainer" parent="FloatToolsLayer/Container/Console/VBoxContainer"]
 margin_top = 24.0
